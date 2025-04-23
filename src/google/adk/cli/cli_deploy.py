@@ -23,6 +23,8 @@ _DOCKERFILE_TEMPLATE = """
 FROM python:3.11-slim
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y build-essential libpq-dev
+
 # Create a non-root user
 RUN adduser --disabled-password --gecos "" myuser
 
@@ -40,8 +42,6 @@ ENV GOOGLE_CLOUD_PROJECT={gcp_project_id}
 ENV GOOGLE_CLOUD_LOCATION={gcp_region}
 
 # Set up environment variables - End
-
-RUN apt-get update && apt-get install -y build-essential libpq-dev
 
 # Install ADK - Start
 RUN pip install google-adk
