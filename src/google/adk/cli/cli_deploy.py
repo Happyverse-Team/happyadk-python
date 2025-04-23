@@ -41,6 +41,8 @@ ENV GOOGLE_CLOUD_LOCATION={gcp_region}
 
 # Set up environment variables - End
 
+RUN apt-get update && apt-get install -y build-essential libpq-dev && rm -rf /var/lib/apt/lists/*
+
 # Install ADK - Start
 RUN pip install google-adk
 # Install ADK - End
