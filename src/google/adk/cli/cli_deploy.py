@@ -186,6 +186,8 @@ def to_cloud_run(
             'vpc-default',
             '--vpc-egress',
             'private-ranges-only',
+            '--ingress',
+            'internal',
         ],
         check=True,
     )
