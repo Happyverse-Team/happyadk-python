@@ -182,6 +182,10 @@ def to_cloud_run(
             verbosity,
             '--labels',
             'created-by=adk',
+            '--vpc-connector',
+            'default',
+            '--vpc-egress',
+            'private-ranges-only',
         ],
         check=True,
     )
