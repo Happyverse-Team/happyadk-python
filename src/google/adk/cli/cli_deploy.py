@@ -183,7 +183,7 @@ def to_cloud_run(
             '--labels',
             'created-by=adk',
             '--vpc-connector',
-            'default',
+            'vpc-default',
             '--vpc-egress',
             'private-ranges-only',
         ],
