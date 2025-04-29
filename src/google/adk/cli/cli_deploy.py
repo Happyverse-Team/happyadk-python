@@ -187,7 +187,7 @@ def to_cloud_run(
             '--vpc-egress',
             'private-ranges-only',
             '--ingress',
-            'internal',
+            'internal-and-cloud-load-balancing',
         ],
         check=True,
     )
