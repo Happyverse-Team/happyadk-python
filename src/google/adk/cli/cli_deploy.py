@@ -44,7 +44,7 @@ ENV GOOGLE_CLOUD_LOCATION={gcp_region}
 # Set up environment variables - End
 
 # Install ADK - Start
-RUN pip install google-adk
+RUN pip install google-adk==0.2.0
 # Install ADK - End
 
 # Copy agent - Start
